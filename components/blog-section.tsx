@@ -58,7 +58,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
               className="group relative isolate"
             >
               <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
-                <h3 className="mt-4 font-semibold tracking-tight">
+                <h3 className="font-semibold tracking-tight">
                   <Link href={`/blog/${blog.slug}`}>
                     <span className="absolute inset-0"></span>
                     {blog.title}
