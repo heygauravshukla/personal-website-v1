@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
@@ -44,6 +45,7 @@ export default function RootLayout({
           >
             <SiteHeader />
             {children}
+            <SiteFooter />
           </ThemeProvider>
         </body>
       </html>
