@@ -1,4 +1,5 @@
 import { PageIntro } from "@/components/page-intro";
+import { TimelineSection } from "@/components/timeline-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function AboutPage() {
         title="About Me"
         description="I'm a software engineer with expertise in React, TypeScript, and modern web technologies. I focus on building user-centric applications, contributing to open-source, and sharing knowledge through detailed technical articles."
       />
+      <TimelineSection />
     </main>
   );
 }
