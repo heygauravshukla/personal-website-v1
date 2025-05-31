@@ -9,9 +9,17 @@ interface SocialLink {
 
 export function SiteFooter() {
   const socialLinks: SocialLink[] = [
-    { platform: "GitHub", href: "/", icon: "github" },
-    { platform: "LinkedIn", href: "/", icon: "linkedin" },
-    { platform: "X", href: "/", icon: "x" },
+    {
+      platform: "GitHub",
+      href: "https://github.com/heygauravshukla",
+      icon: "github",
+    },
+    {
+      platform: "LinkedIn",
+      href: "https://www.linkedin.com/in/heygauravshukla",
+      icon: "linkedin",
+    },
+    { platform: "X", href: "https://x.com/heygauravshukla", icon: "x" },
   ];
 
   return (
