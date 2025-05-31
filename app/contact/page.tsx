@@ -1,3 +1,4 @@
+import { ContactSection } from "@/components/contact-section";
 import { PageIntro } from "@/components/page-intro";
 import { Metadata } from "next";
 
@@ -14,6 +15,7 @@ export default function ContactPage() {
         title="Contact Me"
         description="Have a question or want to work together? I'm always open to discussing new opportunities and interesting projects. Feel free to reach out."
       />
+      <ContactSection />
     </main>
   );
 }
