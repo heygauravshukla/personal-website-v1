@@ -76,7 +76,7 @@ export function SiteHeader() {
               >
                 <Link
                   href={item.href}
-                  className="text-xl"
+                  className="text-2xl"
                   onClick={handleLinkClick}
                 >
                   {item.label}
