@@ -1,3 +1,4 @@
+import { BlogsSection } from "@/components/blog-section";
 import { PageIntro } from "@/components/page-intro";
 import { Metadata } from "next";
 
@@ -14,6 +15,7 @@ export default function BlogsPage() {
         title="All blogs"
         description="Explore my collection of articles about web development, coding practices, and technology insights. I write about frontend development, React, and modern web technologies."
       />
+      <BlogsSection />
     </main>
   );
 }
