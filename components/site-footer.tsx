@@ -23,7 +23,10 @@ export function SiteFooter() {
   ];
 
   return (
-    <Wrapper as="footer" className="flex items-center justify-between py-3">
+    <Wrapper
+      as="footer"
+      className="flex items-center justify-between border-t py-3"
+    >
       <p className="text-muted-foreground text-xs">
         Built with love by Gaurav Shukla
       </p>
