@@ -52,7 +52,7 @@ export async function ProjectsSection({ limit }: { limit?: number }) {
     <Wrapper as="section" className="space-y-6 border-y py-10">
       <SectionHeading>I love building projects</SectionHeading>
 
-      <ul className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+      <ul className="grid gap-y-8 sm:grid-cols-2 sm:gap-x-4 md:grid-cols-3 md:gap-x-6">
         {sortedProjects.map((project, idx) => {
           return (
             <motion.li
