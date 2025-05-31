@@ -1,4 +1,5 @@
 import { PageIntro } from "@/components/page-intro";
+import { ProjectsSection } from "@/components/projects-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function ProjectsPage() {
         title="Projects"
         description="Check out some of my featured projects and personal works. Each project represents my passion for building innovative solutions and learning new technologies."
       />
+      <ProjectsSection />
     </main>
   );
 }
