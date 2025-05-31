@@ -1,4 +1,5 @@
 import { PageIntro } from "@/components/page-intro";
+import { ResourcesSection } from "@/components/resources-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function ResourcesPage() {
         title="Resources"
         description="Here's a collection of resources, tools, and websites that I use regularly. These have helped me in my development journey and might be useful for you too."
       />
+      <ResourcesSection />
     </main>
   );
 }
