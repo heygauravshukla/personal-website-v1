@@ -1,0 +1,65 @@
+---
+title: "My Ultimate VS Code Setup for Web Development in 2025"
+description: "Learn how to set up Visual Studio Code with the best extensions, themes, and settings for web development. Includes performance tips and keyboard shortcuts."
+image: "/blog/vscode-setup.jpg"
+publishDate: "2025-05-31"
+tags:
+  - vscode
+  - productivity
+  - development
+  - tools
+  - setup
+  - extensions
+---
+
+## Introduction
+
+Visual Studio Code has become the de facto code editor for web developers, and for good reason. Its extensibility, performance, and features make it an incredibly powerful tool. In this guide, I'll share my complete VS Code setup that I've refined over years of web development. You'll learn about essential extensions, productivity-boosting settings, and customizations that will significantly improve your development workflow.
+
+## Core Settings and Customization
+
+### Essential Settings
+
+Here are my must-have settings for VS Code. Add these to your `settings.json`:
+
+```json
+{
+  "workbench.colorTheme": "Night Owl",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 1.6,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "editor.wordWrap": "on",
+  "git.confirmSync": false,
+  "git.autofetch": true
+}
+```
+
+### Theme Setup
+
+I prefer dark themes for reduced eye strain. Here's my current theme setup:
+
+- **Color Theme**: [Tokyo Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
+- **Icon Theme**: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- **Font**: [JetBrains Mono](https://www.jetbrains.com/lp/mono/) with ligatures enabled
+
+## Essential Extensions
+
+### Code Quality and Formatting
+
+- 🎨 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatting
+- 📝 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - JavaScript linting
+- 🔍 [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Catch spelling mistakes
+- ⚡ [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) - Inline error messages
+
+### IntelliSense and Snippets
+
+- 🤖 [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI code suggestions
+- 📦 [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense) - npm package autocompletion
+- 🎯 [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) - File path autocompletion
+- ⚛️ [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - React code snippets
