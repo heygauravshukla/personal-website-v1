@@ -1,3 +1,4 @@
+import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
@@ -41,6 +42,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <SiteHeader />
             {children}
           </ThemeProvider>
         </body>
