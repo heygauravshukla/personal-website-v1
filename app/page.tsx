@@ -1,6 +1,7 @@
 import { BlogsSection } from "@/components/blog-section";
 import { PageIntro } from "@/components/page-intro";
 import { ProjectsSection } from "@/components/projects-section";
+import { TimelineSection } from "@/components/timeline-section";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       />
       <ProjectsSection limit={3} />
       <BlogsSection limit={3} />
+      <TimelineSection />
     </main>
   );
 }
