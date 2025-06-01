@@ -1,12 +1,12 @@
 ---
 title: "Personal Website"
-description: "A website to showcase technical expertise with projects, articles and a lot more."
+description: "A modern, performant personal website to showcase my work, write technical blogs, and share resources."
 image: "/projects/personal-website.webp"
 stack:
   - Next.js
-  - shadcn/ui
   - TypeScript
   - Tailwind CSS
+  - shadcn/ui
   - Motion
   - MDX
 publishDate: "2025-05-31"
@@ -14,95 +14,102 @@ live: "https://gshukla.vercel.app"
 repository: "https://github.com/heygauravshukla/personal-website"
 ---
 
-## Overview
+## 🧠 Overview
 
-### The challenge
+This project is the **first version of my personal website**, designed to serve as a central hub for my technical portfolio, blog posts, and curated resources. The site is clean, responsive, and optimized for performance — and it's built to scale as I grow.
 
-Users should be able to:
+---
 
-- Navigate through a modern, responsive portfolio website with smooth animations
-- Read technical blog posts with syntax highlighting and responsive layouts
-- View detailed project case studies with live demos and source code
-- Access a curated list of development resources and tools
-- Contact me through a secure, validated contact form
-- Switch between light and dark themes for comfortable viewing
+## 🚀 Goals & Challenges
 
-## My process
+I aimed to build a site that:
 
-### Built with
+- Communicates my personal brand clearly
+- Enables me to share technical insights through blog posts
+- Showcases detailed project case studies with code and demos
+- Offers a smooth and modern user experience
+- Uses a scalable, component-driven architecture
+- Includes a reliable, accessible contact system
 
-- Modern tech stack and best practices:
+---
 
-  - [Next.js 15](https://nextjs.org/) - React framework with App Router
-  - [TypeScript](https://www.typescriptlang.org/) - Type-safe development
-  - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
-  - [shadcn/ui](https://ui.shadcn.com/) - Accessible UI components
-  - [Motion](https://motion.dev) - Smooth animations
-  - [MDX](https://mdxjs.com/) - Enhanced Markdown for blog posts
-  - [EmailJS](https://www.emailjs.com/) - Serverless contact form
-  - [pnpm](https://pnpm.io/) - Fast package manager
+## 🛠️ Tech Stack & Tools
 
-- Development practices:
-  - Mobile-first responsive design
-  - Semantic HTML structure
-  - Component-driven architecture
-  - Progressive enhancement
-  - Accessibility (a11y) best practices
-  - Performance optimization
-  - View transitions between pages
+Built using a modern frontend stack:
 
-### Key Features
+- **Next.js 15 (App Router)** – React-based framework with file-based routing and layouts
+- **TypeScript** – For type safety and scalable code
+- **Tailwind CSS** – Utility-first styling with complete design flexibility
+- **shadcn/ui** – Accessible and composable component library
+- **Framer Motion** – For subtle yet smooth animations
+- **MDX** – Write content with JSX and Markdown
+- **react-hook-form** + **Zod** – Flexible form handling with robust validation
+- **EmailJS** – Serverless email handling for contact form submissions
+- **Sonner** – Lightweight toast notifications
+- **pnpm** – Efficient package manager
 
-#### Blog Platform
+---
 
-- MDX-powered blog posts.
-- Rich content support including code blocks and images
-- Responsive layout for optimal reading experience
+## 🔍 Key Features
 
-#### Project Showcase
+### 📝 MDX Blog
 
-- Detailed case studies for each project
-- Live demo links and GitHub repository access
-- Visual previews with optimized images
+- MDX-powered blog with support for JSX in Markdown
+- Syntax highlighting for code blocks (coming soon)
+- Fully responsive, readable design
+- Easy content editing from local MDX files
 
-#### Development Resources
+### 💼 Project Case Studies
 
-- Curated list of useful tools and resources
-- Categorized sections for easy navigation
-- Regular updates with new findings
+- Detailed breakdowns of selected projects
+- Live demos and GitHub links
+- Optimized image previews
+- Reusable project card components
 
-#### Contact System
+### 📚 Resources Section
 
-- Form validation using Zod
-- EmailJS integration for serverless email handling
-- Loading states and error handling
-- Success notifications using Sonner
+- Curated tools, libraries, and references I use
+- Categorized for easy navigation
+- Periodically updated
 
-#### Technical Implementation
+### 📬 Contact Form
 
-The website implements several modern web development practices:
+- Validated using Zod + react-hook-form
+- EmailJS integration for seamless delivery
+- Loading states and toast notifications (Sonner)
+- Accessibility features and keyboard navigation
 
-- **App Router**: Utilizing Next.js 15's app router for improved routing and layouts
-- **Dark Mode**: System-aware theme switching with next-themes
-- **Type Safety**: Full TypeScript implementation for reliable code
-- **Component Library**: Custom UI components built on shadcn/ui
-- **Animation**: Subtle animations using Motion for enhanced UX
-- **Performance**: Image optimization, code splitting, and lazy loading
-- **Accessibility**: ARIA labels, keyboard navigation, and semantic HTML
+---
 
-### Future Enhancements
+## 🧩 Implementation Highlights
 
-Planned features and improvements:
+- **Dark/Light Mode** with system preference via `next-themes`
+- **App Router** layouts for flexible page structures
+- **View Transitions API** for smooth route changes
+- **Image optimization**, lazy loading, and code splitting
+- **A11y-focused**: Semantic HTML, keyboard support, and ARIA labels
+- **Component-driven**: Reusable design patterns using shadcn/ui
 
-- Syntax highlighting
-- Project filtering and search
-- Enhanced SEO optimization
-- Automated project screenshots
+---
 
-### Useful Resources
+## 🔮 Future Improvements
 
-- [YouTube video by Manu Arora](https://youtu.be/J0sT7d0r6T4?si=dGtAEwNyvUPWwP2H) - Tutorial on making a portfolio site with Next.js and Motion
-- [Next.js App Router Documentation](https://nextjs.org/docs/app) - Comprehensive guide for the new routing system
-- [shadcn/ui Components](https://ui.shadcn.com/) - Beautiful and accessible components
-- [MDX with Next.js](https://nextjs.org/docs/app/building-your-application/configuring/mdx) - Setting up MDX for content
-- [Motion Examples](https://examples.motion.dev) - Animation patterns and examples
+Planned upgrades and ideas:
+
+- Syntax highlighting in blog (Shiki or rehype-prism)
+- Tag-based blog and project filtering
+- Auto-generated OG images for SEO
+- Dynamic sitemap and RSS feed
+- Better analytics integration
+
+---
+
+## 📎 References & Inspiration
+
+- [Building a Personal Site with Next.js & Motion – Manu Arora](https://youtu.be/J0sT7d0r6T4?si=dGtAEwNyvUPWwP2H)
+- [MDX in Next.js – Colby Fayock](https://youtu.be/MsSUAOkepCw?si=DX6Fboi9r02nfqFx)
+- [Squoosh - Image Optimizer](https://squoosh.app)
+- [RedKetchup - Favicon Generator](https://redketchup.io/favicon-generator)
+- [Spotlight - Personal website template by Tailwind Plus](https://spotlight.tailwindui.com)
+
+Thanks for reading — this is just the beginning. I’m excited to keep evolving the site and sharing more along the way.
