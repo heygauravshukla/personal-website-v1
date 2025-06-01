@@ -16,7 +16,7 @@ export function Wrapper<T extends ElementType = "div">({
     Component,
     {
       className: cn(
-        "bg-background dark:bg-muted mx-auto max-w-4xl px-4 md:px-6",
+        "bg-background dark:bg-muted mx-auto max-w-4xl px-4 md:px-6 border-x lg:px-10",
         className,
       ),
     },
