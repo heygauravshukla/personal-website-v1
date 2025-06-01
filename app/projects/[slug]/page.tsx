@@ -65,14 +65,14 @@ export default async function ProjectPage(props: {
 
         <article className="prose dark:prose-invert mx-auto">
           <h1 className="tracking-tight">{data.frontmatter.title}</h1>
+          <p>{data.frontmatter.description}</p>
           <Image
             src={data.frontmatter.image}
             alt={data.frontmatter.title}
             width={800}
             height={600}
-            className="aspect-[4/3] w-full rounded-lg border object-cover shadow"
+            className="aspect-video w-full rounded-lg border object-cover shadow"
           />
-          <p>{data.frontmatter.description}</p>
           <div className="flex flex-wrap items-center gap-3">
             <Button asChild className="no-underline">
               <a
