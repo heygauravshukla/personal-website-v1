@@ -4,20 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
-import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-const roboto_mono = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto-mono",
-});
 
 export const metadata: Metadata = {
   title: "Gaurav Shukla - Software engineer, creator, and tech enthusiast",
@@ -32,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html
-        lang="en"
-        suppressHydrationWarning
-        className={`${inter.variable} ${roboto_mono.variable} antialiased`}
-      >
+      <html lang="en" suppressHydrationWarning className="antialiased">
         <body>
           <ThemeProvider
             attribute="class"
