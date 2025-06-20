@@ -97,8 +97,10 @@ export function ResourcesSection() {
                   viewport={{ once: true }}
                   className="group relative isolate grid rounded-md border p-4"
                 >
-                  <h4 className="order-2 mt-1">{resource.title}</h4>
-                  <p className="text-muted-foreground order-3 mt-1 text-sm">
+                  <h4 className="order-2 mt-1 leading-tight font-medium">
+                    {resource.title}
+                  </h4>
+                  <p className="text-muted-foreground order-3 mt-1 text-sm leading-normal">
                     {resource.description}
                   </p>
                   <a

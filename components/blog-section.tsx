@@ -59,7 +59,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
               className="group relative isolate"
             >
               <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
-                <h3 className="font-semibold tracking-tight">
+                <h3 className="leading-tight font-medium">
                   <Link href={`/blog/${blog.slug}`}>
                     <span className="absolute inset-0"></span>
                     {blog.title}
@@ -73,7 +73,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
                   })}
                 </time>
               </div>
-              <p className="text-muted-foreground mt-2 line-clamp-2 max-w-lg text-sm">
+              <p className="text-muted-foreground mt-2 line-clamp-2 max-w-lg text-sm leading-normal">
                 {blog.description}
               </p>
             </motion.li>

@@ -92,8 +92,10 @@ export function TimelineSection() {
                 >
                   <CircleCheck className="fill-primary text-primary-foreground mt-1 size-5 min-w-fit" />
                   <div>
-                    <h4>{achievement.title}</h4>
-                    <p className="text-muted-foreground text-sm">
+                    <h4 className="leading-tight font-medium">
+                      {achievement.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm leading-normal">
                       {achievement.description}
                     </p>
                   </div>

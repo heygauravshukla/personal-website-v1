@@ -70,13 +70,13 @@ export async function ProjectsSection({ limit }: { limit?: number }) {
                 height={300}
                 className="aspect-[4/3] rounded-lg object-cover transition-all duration-200 group-hover:scale-105"
               />
-              <h3 className="mt-4 font-semibold tracking-tight">
+              <h3 className="mt-4 leading-tight font-medium">
                 <Link href={`/projects/${project.slug}`}>
                   <span className="absolute inset-0"></span>
                   {project.title}
                 </Link>
               </h3>
-              <p className="text-muted-foreground mt-2 line-clamp-2 text-sm">
+              <p className="text-muted-foreground mt-2 line-clamp-2 text-sm leading-normal">
                 {project.description}
               </p>
             </motion.li>
