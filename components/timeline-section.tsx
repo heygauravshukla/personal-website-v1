@@ -59,7 +59,7 @@ export function TimelineSection() {
 
   return (
     <Wrapper as="section" className="space-y-6 border-y py-10">
-      <SectionHeading>Timeline of Achievements</SectionHeading>
+      <SectionHeading>Timeline</SectionHeading>
 
       <ul className="space-y-6">
         {timeline.map((item, idx) => (

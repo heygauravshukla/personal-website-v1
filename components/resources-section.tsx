@@ -17,7 +17,7 @@ interface ResourceItem {
 export function ResourcesSection() {
   const resources: ResourceItem[] = [
     {
-      category: "Useful Utilities",
+      category: "Utilities",
       items: [
         {
           title: "Favicon Generator",
@@ -44,7 +44,7 @@ export function ResourcesSection() {
       ],
     },
     {
-      category: "User Interface",
+      category: "UI",
       items: [
         {
           title: "shadcn/ui - React components library",

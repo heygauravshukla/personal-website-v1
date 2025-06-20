@@ -45,7 +45,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
 
   return (
     <Wrapper as="section" className="space-y-6 border-y py-10">
-      <SectionHeading>Sharing knowledge as I learn</SectionHeading>
+      <SectionHeading>Writing</SectionHeading>
 
       <ul className="grid gap-6">
         {sortedBlogs.map((blog, idx) => {

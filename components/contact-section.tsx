@@ -72,7 +72,7 @@ export function ContactSection() {
   return (
     <Wrapper as="section" className="space-y-6 border-y py-12">
       <span className="sr-only">
-        <SectionHeading>Get in touch</SectionHeading>
+        <SectionHeading>Contact</SectionHeading>
       </span>
 
       <Form {...form}>

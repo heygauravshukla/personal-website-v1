@@ -7,7 +7,7 @@ export function SectionHeading({ children }: { children: React.ReactNode }) {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
     >
-      <span className="bg-accent text-primary rounded px-2 py-1 text-sm sm:text-base">
+      <span className="text-sm font-bold tracking-widest text-teal-500 uppercase dark:text-teal-200">
         {children}
       </span>
     </motion.h2>
