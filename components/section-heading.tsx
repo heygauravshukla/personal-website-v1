@@ -8,7 +8,7 @@ export function SectionHeading({ children }: { children: React.ReactNode }) {
       transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <span className="text-sm font-bold tracking-widest text-teal-500 uppercase dark:text-teal-200">
+      <span className="text-primary text-sm font-bold tracking-widest uppercase">
         {children}
       </span>
     </motion.h2>
