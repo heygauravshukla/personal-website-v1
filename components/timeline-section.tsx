@@ -68,6 +68,7 @@ export function TimelineSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1, duration: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="space-y-4"
           >
             <h3>
@@ -86,6 +87,7 @@ export function TimelineSection() {
                     duration: 0.4,
                     ease: "easeOut",
                   }}
+                  viewport={{ once: true }}
                   className="flex gap-2"
                 >
                   <CircleCheck className="fill-primary text-primary-foreground mt-1 size-5 min-w-fit" />

@@ -79,6 +79,7 @@ export function ResourcesSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1, duration: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="space-y-4"
           >
             <SectionHeading>{item.category}</SectionHeading>
@@ -93,6 +94,7 @@ export function ResourcesSection() {
                     duration: 0.4,
                     ease: "easeOut",
                   }}
+                  viewport={{ once: true }}
                   className="group relative isolate grid rounded-md border p-4"
                 >
                   <h4 className="order-2 mt-1">{resource.title}</h4>

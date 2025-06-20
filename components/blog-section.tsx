@@ -55,6 +55,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
               className="group relative isolate"
             >
               <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">

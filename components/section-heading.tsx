@@ -6,6 +6,7 @@ export function SectionHeading({ children }: { children: React.ReactNode }) {
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <span className="text-sm font-bold tracking-widest text-teal-500 uppercase dark:text-teal-200">
         {children}
