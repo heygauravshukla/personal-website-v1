@@ -58,7 +58,7 @@ export default async function BlogPage(props: {
           <BackButton />
         </nav>
 
-        <article className="prose dark:prose-invert mx-auto">
+        <article className="prose prose-slate dark:prose-invert mx-auto">
           <h1 className="tracking-tight">{data.frontmatter.title}</h1>
           <p>{data.frontmatter.description}</p>
           <Image
