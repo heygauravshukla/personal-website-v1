@@ -19,7 +19,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params;
   const content = await fs.readFile(
-    path.join(process.cwd(), "content/blog", `${params.slug}.mdx`),
+    path.join(process.cwd(), "src/content/blog", `${params.slug}.mdx`),
     "utf-8",
   );
   const { frontmatter } = await compileMDX<Frontmatter>({
@@ -41,7 +41,7 @@ export default async function BlogPage(props: {
   const params = await props.params;
   try {
     const content = await fs.readFile(
-      path.join(process.cwd(), "content/blog", `${params.slug}.mdx`),
+      path.join(process.cwd(), "src/content/blog", `${params.slug}.mdx`),
       "utf-8",
     );
     const data = await compileMDX<Frontmatter>({
