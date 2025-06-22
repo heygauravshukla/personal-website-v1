@@ -1,59 +1,45 @@
 import { SectionHeading } from "@/components/section-heading";
 import { Wrapper } from "@/components/wrapper";
-import { promises as fs } from "fs";
 import * as motion from "motion/react-client";
-import { compileMDX } from "next-mdx-remote/rsc";
-import { Link } from "next-view-transitions";
 import Image from "next/image";
-import path from "path";
 
-interface Frontmatter {
-  title: string;
-  description: string;
-  image: string;
-  stack: string[];
-  publishDate: string;
-  live: string;
-  repository?: string;
-}
-
-export async function ProjectsSection({ limit }: { limit?: number }) {
-  const filenames = await fs.readdir(
-    path.join(process.cwd(), "src/content/projects"),
-  );
-  const projects = await Promise.all(
-    filenames.map(async (filename) => {
-      const content = await fs.readFile(
-        path.join(process.cwd(), "src/content/projects", filename),
-        "utf-8",
-      );
-      const { frontmatter } = await compileMDX<Frontmatter>({
-        source: content,
-        options: {
-          parseFrontmatter: true,
-        },
-      });
-      return {
-        filename,
-        slug: filename.replace(".mdx", ""),
-        ...frontmatter,
-      };
-    }),
-  );
-
-  const sortedProjects = projects
-    .sort(
-      (a, b) =>
-        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
-    )
-    .slice(0, limit);
+export function ProjectsSection({ limit }: { limit?: number }) {
+  const projects = [
+    {
+      title: "Shortly - URL Shortener",
+      description:
+        "A URL shortener app that shortens longer URLs to shareable concise links.",
+      image: "/projects/shortly-url-shortener.webp",
+      link: "https://sus-gshukla.vercel.app",
+      repository: "https://github.com/heygauravshukla/shortly-url-shortener",
+      stack: ["Next.js", "Tailwind CSS", "TypeScript", "shadcn/ui"],
+    },
+    {
+      title: "IP Address Tracker",
+      description:
+        "A IP address tracker app that shows the location of an IP address.",
+      image: "/projects/ip-address-tracker.webp",
+      link: "https://sus-gshukla.vercel.app",
+      repository: "https://github.com/heygauravshukla/ip-address-tracker",
+      stack: ["Next.js", "Tailwind CSS", "REST API"],
+    },
+    {
+      title: "Weather App",
+      description:
+        "A weather app that shows the current weather details of a city.",
+      image: "/projects/weather-app.jpg",
+      link: "https://weather-app-gshukla.vercel.app",
+      repository: "https://github.com/heygauravshukla/weather-app",
+      stack: ["HTML", "CSS", "JavaScript"],
+    },
+  ];
 
   return (
     <Wrapper as="section" className="space-y-6 border-y py-10">
       <SectionHeading>Projects</SectionHeading>
 
       <ul className="grid gap-y-8 sm:grid-cols-2 sm:gap-x-4 md:grid-cols-3 md:gap-x-6">
-        {sortedProjects.map((project, idx) => {
+        {projects.slice(0, limit).map((project, idx) => {
           return (
             <motion.li
               key={project.title}
@@ -71,12 +57,16 @@ export async function ProjectsSection({ limit }: { limit?: number }) {
                 className="aspect-[4/3] rounded-lg object-cover transition-all duration-200 group-hover:scale-105"
               />
               <h3 className="mt-4 leading-tight font-medium">
-                <Link href={`/projects/${project.slug}`}>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span className="absolute inset-0"></span>
                   {project.title}
-                </Link>
+                </a>
               </h3>
-              <p className="text-muted-foreground mt-2 line-clamp-2 text-sm leading-normal">
+              <p className="text-muted-foreground mt-2 text-sm leading-normal">
                 {project.description}
               </p>
             </motion.li>
