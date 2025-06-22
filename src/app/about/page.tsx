@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Gaurav Shukla",
   description:
-    "I'm Gaurav Shukla, a passionate software engineer specializing in front-end development. I create modern web applications, contribute to open-source projects, and share technical insights through my blog.",
+    "I'm Gaurav Shukla, a passionate software engineer specializing in front-end development. I create modern web applications, contribute to open-source projects, and share technical insights through my article.",
 };
 
 export default function AboutPage() {

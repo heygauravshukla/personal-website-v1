@@ -17,7 +17,7 @@ interface NavItem {
 export function SiteHeader() {
   const navItems: NavItem[] = [
     { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "Articles", href: "/articles" },
     { label: "Projects", href: "/projects" },
     { label: "Resources", href: "/resources" },
     { label: "Contact", href: "/contact" },

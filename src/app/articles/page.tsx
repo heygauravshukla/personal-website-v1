@@ -1,21 +1,21 @@
-import { BlogsSection } from "@/components/blog-section";
+import { ArticlesSection } from "@/components/articles-section";
 import { PageIntro } from "@/components/page-intro";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "All blogs | Gaurav Shukla",
+  title: "Articles - Gaurav Shukla",
   description:
-    "Read my latest blogs about web development, frontend technologies, and software engineering best practices. Sharing insights and experiences from my journey as a developer.",
+    "Read my latest articles about web development, frontend technologies, and software engineering best practices. Sharing insights and experiences from my journey as a developer.",
 };
 
-export default function BlogsPage() {
+export default function ArticlesPage() {
   return (
     <main>
       <PageIntro
-        title="All blogs"
+        title="All articles"
         description="Explore my collection of articles about web development, coding practices, and technology insights. I write about frontend development, React, and modern web technologies."
       />
-      <BlogsSection />
+      <ArticlesSection />
     </main>
   );
 }

@@ -58,7 +58,7 @@ const plexMono = localFont({
 export const metadata: Metadata = {
   title: "Gaurav Shukla - Software engineer, creator, and tech enthusiast",
   description:
-    "I’m Gaurav, a software engineer and creator based in India. I do front-end development, build awesome projects and share knowledge through blogs.",
+    "I’m Gaurav, a software engineer and creator based in India. I do front-end development, build awesome projects and share knowledge through articles.",
 };
 
 export default function RootLayout({

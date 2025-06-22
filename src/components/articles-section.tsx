@@ -14,14 +14,12 @@ interface Frontmatter {
   tags: string[];
 }
 
-export async function BlogsSection({ limit }: { limit?: number }) {
-  const filenames = await fs.readdir(
-    path.join(process.cwd(), "src/content/blog"),
-  );
-  const blogs = await Promise.all(
+export async function ArticlesSection({ limit }: { limit?: number }) {
+  const filenames = await fs.readdir(path.join(process.cwd(), "src/articles"));
+  const articles = await Promise.all(
     filenames.map(async (filename) => {
       const content = await fs.readFile(
-        path.join(process.cwd(), "src/content/blog", filename),
+        path.join(process.cwd(), "src/articles", filename),
         "utf-8",
       );
       const { frontmatter } = await compileMDX<Frontmatter>({
@@ -38,7 +36,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
     }),
   );
 
-  const sortedBlogs = blogs
+  const sortedArticles = articles
     .sort(
       (a, b) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
@@ -47,13 +45,13 @@ export async function BlogsSection({ limit }: { limit?: number }) {
 
   return (
     <Wrapper as="section" className="space-y-6 border-y py-10">
-      <SectionHeading>Writing</SectionHeading>
+      <SectionHeading>Articles</SectionHeading>
 
       <ul className="grid gap-6">
-        {sortedBlogs.map((blog, idx) => {
+        {sortedArticles.map((article, idx) => {
           return (
             <motion.li
-              key={blog.title}
+              key={article.title}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.5, ease: "easeOut" }}
@@ -62,13 +60,13 @@ export async function BlogsSection({ limit }: { limit?: number }) {
             >
               <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                 <h3 className="leading-tight font-medium">
-                  <Link href={`/blog/${blog.slug}`}>
+                  <Link href={`/articles/${article.slug}`}>
                     <span className="absolute inset-0"></span>
-                    {blog.title}
+                    {article.title}
                   </Link>
                 </h3>
                 <time className="text-muted-foreground text-sm">
-                  {new Date(blog.publishDate).toLocaleDateString("en-US", {
+                  {new Date(article.publishDate).toLocaleDateString("en-US", {
                     month: "long",
                     day: "numeric",
                     year: "numeric",
@@ -76,7 +74,7 @@ export async function BlogsSection({ limit }: { limit?: number }) {
                 </time>
               </div>
               <p className="text-muted-foreground mt-2 line-clamp-2 max-w-lg text-sm leading-normal">
-                {blog.description}
+                {article.description}
               </p>
             </motion.li>
           );
