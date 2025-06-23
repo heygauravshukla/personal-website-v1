@@ -19,7 +19,7 @@ export function ProjectsSection({ limit }: { limit?: number }) {
       description:
         "A IP address tracker app that shows the location of an IP address.",
       image: "/projects/ip-address-tracker.webp",
-      link: "https://sus-gshukla.vercel.app",
+      link: "https://iat-gshukla.vercel.app",
       repository: "https://github.com/heygauravshukla/ip-address-tracker",
       stack: ["Next.js", "Tailwind CSS", "REST API"],
     },
