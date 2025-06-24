@@ -1,0 +1,170 @@
+---
+title: "How I Made the Same Font Look Way Better Without Changing the Font"
+description: "I'm a developer, not a designer. But I still want my typography to look great. Here's how I made the same font look way better using one CSS trick."
+image: "/articles/same-font-different-style.jpg"
+publishDate: "2025-06-24"
+tags:
+  - frontend
+  - css
+  - typography
+  - nextjs
+  - learning
+---
+
+I’m not a designer.
+
+But just because you're a developer doesn’t mean your typography has to be boring.
+
+So when I used the Inter font on my site and it looked kind of… flat, I figured I’d just messed up the spacing or weights.
+![My personal website](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jvt65l6ucwr5chipvqpb.jpg)
+
+Then I came across another portfolio that used Inter — and it looked amazing.
+![Brittany Chiang's portfolio](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w3se712rasdb0lie5kbf.jpg)
+
+Same font. Totally different vibe.
+
+---
+
+## The Typography Problem No One Talks About
+
+I was confused.
+
+How can the exact same font look so much better on someone else’s site?
+
+I dug into it and noticed something subtle but important:
+
+The letter **“a”** was shaped differently.
+
+On my site, it was the traditional double-storey “a.”
+On theirs, it was a rounder, simpler single-storey version.
+
+---
+
+## Fonts Have Hidden Glyphs (And You Can Unlock Them)
+
+Turns out fonts don’t just have weights and spacing.
+They also have alternate versions of characters — called **glyphs**.
+
+The Inter font includes a bunch of these variations.
+But they’re not enabled by default.
+
+To unlock them, you can use this CSS:
+
+```css
+font-feature-settings: <feature-tag-value>;
+```
+
+Here `<feature-tag-value>` represents a space-separated tuple consisting of a tag name and an optional value.
+
+For example, to enable the single-storey “a”, you can use:
+
+```css
+font-feature-settings: "ss07";
+```
+
+This tells the browser to render a different version of the character — in this case, the modern single-storey “a.”
+
+You can read more about it [here](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings).
+
+---
+
+## Why It Didn’t Work for Me at First
+
+I tried the CSS, but nothing changed.
+
+That’s when I realized: I was using `next/font/google` from Next.js — and Google Fonts **doesn’t support all OpenType features**.
+
+So even though the font was technically Inter, I wasn’t getting the full version.
+
+---
+
+## The Fix: Self-Hosting the Inter Font
+
+To solve this, I self-hosted the font — and it worked perfectly.
+
+Here’s how I did it:
+
+### 1. Download the Font
+
+From the official [Inter GitHub repo](https://github.com/rsms/inter), I grabbed:
+
+- `InterVariable.woff2`
+- `InterVariable-Italic.woff2`
+
+### 2. Add to Your Project
+
+Placed both files in:
+
+```
+/src/app/fonts/
+```
+
+### 3. Use `next/font/local`
+
+In `layout.tsx`, I imported the font like this:
+
+```tsx
+import localFont from "next/font/local";
+
+const inter = localFont({
+  src: [
+    {
+      path: "./fonts/InterVariable.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterVariable-Italic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-inter",
+});
+```
+
+### 4. Set the Font Feature
+
+Then in global CSS:
+
+```css
+html {
+  font-feature-settings: "ss07";
+}
+```
+
+Now the text uses the alternate glyph — and just like that, the font looked cleaner, sharper, and more modern.
+
+---
+
+## Final Thoughts
+
+I didn’t change the font.
+
+I didn’t tweak a thousand settings.
+
+I just enabled one hidden feature — and it made a big difference.
+
+If you’re a developer like me who cares about details, this is a great trick to level up your typography without becoming a designer.
+
+**Before using this font feature make sure your font supports it.**
+
+---
+
+## Links That Helped Me
+
+- [Inter GitHub Repository](https://github.com/rsms/inter)
+- [MDN: `font-feature-settings`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings)
+- [Next.js Local Font Docs](https://nextjs.org/docs/app/api-reference/components/font#local-fonts)
+- [Google Fonts Glyphs](https://fonts.google.com/knowledge/glossary/glyph)
+- [Brittany Chiang’s Portfolio](https://brittanychiang.com)
+
+---
+
+## Want More Dev-Friendly UI Tips?
+
+I’m sharing more little frontend wins like this on [LinkedIn](https://www.linkedin.com/in/heygauravshukla) and [Twitter](https://x.com/heygauravshukla).
+
+If this post helped you, follow me or reach out — I’d love to connect.
+
+Peace ✌️
