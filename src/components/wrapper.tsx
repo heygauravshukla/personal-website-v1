@@ -15,10 +15,7 @@ export function Wrapper<T extends ElementType = "div">({
   return createElement(
     Component,
     {
-      className: cn(
-        "mx-auto max-w-4xl px-4 md:px-6 border-x lg:px-10",
-        className,
-      ),
+      className: cn("mx-auto max-w-5xl px-4 md:px-6", className),
     },
     children,
   );
