@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/hero-section";
 import { Wrapper } from "@/components/wrapper";
 import { SectionIntro } from "@/components/section-intro";
 import { ProjectsList } from "@/components/projects-list";
-import { ArticlesSection } from "@/components/articles-section";
+import { ArticlesList } from "@/components/articles-list";
 import { TimelineSection } from "@/components/timeline-section";
 
 export default function Home() {
@@ -21,7 +21,17 @@ export default function Home() {
         </Wrapper>
       </section>
       <hr />
-      <ArticlesSection limit={3} />
+      <section className="bg-muted/30 py-20 md:py-32">
+        <Wrapper className="space-y-12">
+          <SectionIntro
+            heading="Articles"
+            subheading="I love sharing knowledge."
+            paragraph="Here are some of the articles I've written."
+          />
+          <ArticlesList limit={4} />
+        </Wrapper>
+      </section>
+      <hr />
       <TimelineSection />
     </main>
   );
