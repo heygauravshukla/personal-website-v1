@@ -30,8 +30,8 @@ export function HeroSection() {
   ];
 
   return (
-    <section>
-      <Wrapper className="py-20 md:py-24 lg:py-28">
+    <section className="from-background to-muted/30 bg-gradient-to-b py-20 md:py-32">
+      <Wrapper>
         <motion.h1
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
