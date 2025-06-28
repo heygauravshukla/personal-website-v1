@@ -85,7 +85,7 @@ export function TimelineList() {
                 viewport={{ once: true }}
                 className="flex items-start gap-x-2"
               >
-                <CircleCheck className="fill-primary text-primary-foreground h-[1lh] w-5 flex-none" />
+                <CircleCheck className="fill-primary text-background h-[1lh] w-5 flex-none" />
                 <div>
                   <h4 className="font-medium">{achievement.title}</h4>
                   <p className="text-muted-foreground mt-1 text-sm">
