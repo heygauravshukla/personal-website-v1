@@ -1,22 +1,18 @@
-# Personal Website
+# Portfolio
 
-This is my personal website to showcase my projects, write technical blogs using MDX, and share development resources. It's built with a modern frontend stack and designed with performance, accessibility, and scalability in mind.
+This portfolio showcases my projects, technical articles written in MDX, and curated development resources. It's designed with a focus on performance, accessibility, and scalability.
 
 ## Table of contents
 
 - [Overview](#overview)
-
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-
 - [My process](#my-process)
-
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -26,20 +22,19 @@ This is my personal website to showcase my projects, write technical blogs using
 
 Users should be able to:
 
-- Explore a responsive personal site with light/dark mode
-- Read technical blog posts powered by MDX
-- View project case studies with live demos and source code
-- Access a curated list of development resources
+- Explore the site with light/dark mode
+- Read technical articles powered by MDX
+- Browse a curated list of development bookmarks
 - Contact me via a validated, accessible form
 
 ### Screenshot
 
-![Screenshot](./public/projects/personal-website.webp)
+![Screenshot of portfolio](./public/projects/portfolio.jpg)
 
 ### Links
 
 - Live Site URL: [https://gshukla.vercel.app](https://gshukla.vercel.app)
-- Repository URL: [https://github.com/heygauravshukla/personal-website](https://github.com/heygauravshukla/personal-website)
+- Repository URL: [https://github.com/heygauravshukla/portfolio](https://github.com/heygauravshukla/portfolio)
 
 ## My process
 
@@ -61,29 +56,28 @@ Users should be able to:
 
 ### What I learned
 
-- How to set up MDX in a Next.js project for blog content
+- How to set up MDX in a Next.js project for content
 - Implementing smooth page transitions using the `next-view-transitions` package
-- Adding micro interactions and subtle animations using Motion library
+- Adding micro-interactions and subtle animations using the Motion library
 - Creating accessible forms with real-time validation using `react-hook-form` and `Zod`
 - Building reusable components with shadcn/ui and Tailwind CSS
 - Structuring a scalable Next.js project using the App Router
 
 ### Continued development
 
-- Add code syntax highlighting using Shiki or rehype-prism
-- Introduce filtering/tag system for blog and project content
+- Add code syntax highlighting
 - Generate dynamic OG images for SEO
-- Integrate full-featured analytics dashboard
 - Automate RSS feed and sitemap
 
 ### Useful resources
 
-- [Building a Portfolio with Next.js & Motion – Manu Arora](https://youtu.be/J0sT7d0r6T4?si=dGtAEwNyvUPWwP2H) – Helpful for animations and layout
-- [MDX in Next.js – Colby Fayock](https://youtu.be/MsSUAOkepCw?si=DX6Fboi9r02nfqFx) – Clear walkthrough on using MDX
-- [Next.js App Router Docs](https://nextjs.org/docs/app) – Essential reference for the new routing system
+- [MDX in Next.js – A YouTube video by Colby Fayock](https://youtu.be/MsSUAOkepCw?si=DX6Fboi9r02nfqFx) – Clear walkthrough on using MDX
+- [Inter font GitHub repo](https://github.com/rsms/inter) – Resource to download Inter font
+- [IBM Plex font GitHub repo](https://github.com/IBM/plex) – Resource to download IBM Plex fonts
 - [shadcn/ui](https://ui.shadcn.com/) – Component library used for UI patterns
+- [tweakcn](https://tweakcn.com) – Helpful for customizing the shadcn/ui theme
 - [Squoosh](https://squoosh.app) – Image optimization tool
-- [RedKetchup](https://redketchup.io/favicon-generator) - Favicon Generator
+- [RedKetchup](https://redketchup.io/favicon-generator) – Favicon Generator
 
 ## Author
 
@@ -93,4 +87,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-Huge thanks to the content creators who inspired this build — especially [Manu Arora](https://www.youtube.com/@manuarora) and [Colby Fayock](https://www.youtube.com/@colbyfayock).
+The GitHub repository of [Tailwind CSS docs](https://github.com/tailwindlabs/tailwindcss.com) helped me a lot to get insights into how to self-host fonts, and their [Spotlight template](https://tailwindcss.com/plus/templates/spotlight) was the first inspiration for building this site.
