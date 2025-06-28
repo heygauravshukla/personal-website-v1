@@ -1,10 +1,12 @@
+import { promises as fs } from "fs";
+import path from "path";
+
+import Image from "next/image";
+import { compileMDX } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
+
 import { BackButton } from "@/components/back-button";
 import { Wrapper } from "@/components/wrapper";
-import { promises as fs } from "fs";
-import { compileMDX } from "next-mdx-remote/rsc";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import path from "path";
 
 interface Frontmatter {
   title: string;
@@ -53,13 +55,13 @@ export default async function ArticlePage(props: {
     });
 
     return (
-      <Wrapper as="main" className="space-y-8 py-10">
+      <Wrapper as="main" className="space-y-8 py-10 md:py-20">
         <nav>
           <BackButton />
         </nav>
 
-        <article className="prose prose-slate dark:prose-invert mx-auto">
-          <h1 className="tracking-tight">{data.frontmatter.title}</h1>
+        <article className="prose dark:prose-invert prose-img:rounded-xl prose-img:border mx-auto">
+          <h1>{data.frontmatter.title}</h1>
           <p>{data.frontmatter.description}</p>
           <Image
             src={data.frontmatter.image}
