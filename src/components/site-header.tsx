@@ -44,7 +44,7 @@ export function SiteHeader() {
       <Wrapper className="flex h-16 items-center justify-between gap-4">
         <Link href="/" aria-label="Go to homepage">
           <Image
-            src="/avatar.webp"
+            src="/avatar.jpg"
             alt="Gaurav Shukla's avatar"
             width={40}
             height={40}
