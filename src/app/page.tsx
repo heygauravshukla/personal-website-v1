@@ -3,7 +3,7 @@ import { Wrapper } from "@/components/wrapper";
 import { SectionIntro } from "@/components/section-intro";
 import { ProjectsList } from "@/components/projects-list";
 import { ArticlesList } from "@/components/articles-list";
-import { TimelineSection } from "@/components/timeline-section";
+import { TimelineList } from "@/components/timeline-list";
 
 export default function Home() {
   return (
@@ -32,7 +32,16 @@ export default function Home() {
         </Wrapper>
       </section>
       <hr />
-      <TimelineSection />
+      <section className="py-20 md:py-32">
+        <Wrapper className="space-y-12">
+          <SectionIntro
+            heading="Timeline"
+            subheading="My career journey."
+            paragraph="Here's a timeline of my achievements."
+          />
+          <TimelineList />
+        </Wrapper>
+      </section>
     </main>
   );
 }
