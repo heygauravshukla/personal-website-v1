@@ -38,7 +38,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-4xl font-bold tracking-tight sm:text-5xl/tight md:text-balance"
         >
-          Software engineer, creator, and amateur astronaut.
+          Software engineer, creator, and tech enthusiast.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: -10 }}
