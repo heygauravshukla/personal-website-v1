@@ -1,21 +1,33 @@
-import { PageIntro } from "@/components/page-intro";
-import { ProjectsSection } from "@/components/projects-section";
 import { Metadata } from "next";
+import { PageIntro } from "@/components/page-intro";
+import { Wrapper } from "@/components/wrapper";
+import { SectionIntro } from "@/components/section-intro";
+import { ProjectsList } from "@/components/projects-list";
 
 export const metadata: Metadata = {
-  title: "Projects | Gaurav Shukla",
+  title: "Projects - Gaurav Shukla",
   description:
-    "Explore a collection of my software projects and technical works. From web applications to open-source contributions, discover what I've built.",
+    "Explore my portfolio of web development projects, from full-stack applications to modern frontend solutions. Showcasing my expertise in React, Next.js, and innovative web technologies.",
 };
 
 export default function ProjectsPage() {
   return (
     <main>
       <PageIntro
-        title="Projects"
-        description="Check out some of my featured projects and personal works. Each project represents my passion for building innovative solutions and learning new technologies."
+        title="All projects"
+        description="Discover my portfolio of web development projects, showcasing full-stack applications, modern frontend solutions, and innovative web technologies. From React applications to complete web platforms."
       />
-      <ProjectsSection />
+      <hr />
+      <section className="py-10 md:py-20">
+        <Wrapper className="space-y-12">
+          <SectionIntro
+            heading="Projects"
+            subheading="Explore my collection of projects."
+            paragraph="Projects ranging from web applications to landing pages."
+          />
+          <ProjectsList />
+        </Wrapper>
+      </section>
     </main>
   );
 }

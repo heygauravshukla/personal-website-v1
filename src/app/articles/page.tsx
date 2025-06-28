@@ -1,6 +1,8 @@
-import { ArticlesSection } from "@/components/articles-section";
-import { PageIntro } from "@/components/page-intro";
 import { Metadata } from "next";
+import { PageIntro } from "@/components/page-intro";
+import { Wrapper } from "@/components/wrapper";
+import { SectionIntro } from "@/components/section-intro";
+import { ArticlesList } from "@/components/articles-list";
 
 export const metadata: Metadata = {
   title: "Articles - Gaurav Shukla",
@@ -15,7 +17,17 @@ export default function ArticlesPage() {
         title="All articles"
         description="Explore my collection of articles about web development, coding practices, and technology insights. I write about frontend development, React, and modern web technologies."
       />
-      <ArticlesSection />
+      <hr />
+      <section className="py-10 md:py-20">
+        <Wrapper className="space-y-12">
+          <SectionIntro
+            heading="Articles"
+            subheading="Explore my collection of articles."
+            paragraph="I write about web development and coding practices."
+          />
+          <ArticlesList />
+        </Wrapper>
+      </section>
     </main>
   );
 }
