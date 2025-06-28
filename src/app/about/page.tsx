@@ -1,11 +1,13 @@
-import { PageIntro } from "@/components/page-intro";
-import { TimelineSection } from "@/components/timeline-section";
 import { Metadata } from "next";
+import { PageIntro } from "@/components/page-intro";
+import { Wrapper } from "@/components/wrapper";
+import { SectionIntro } from "@/components/section-intro";
+import { TimelineList } from "@/components/timeline-list";
 
 export const metadata: Metadata = {
-  title: "About | Gaurav Shukla",
+  title: "About - Gaurav Shukla",
   description:
-    "I'm Gaurav Shukla, a passionate software engineer specializing in front-end development. I create modern web applications, contribute to open-source projects, and share technical insights through my article.",
+    "A passionate Software Engineer with expertise in full-stack web development since 2020. Specializing in crafting elegant user interfaces, I combine design engineering with robust front-end and back-end development. I'm dedicated to sharing in-depth technical knowledge through comprehensive articles.",
 };
 
 export default function AboutPage() {
@@ -13,9 +15,19 @@ export default function AboutPage() {
     <main>
       <PageIntro
         title="About Me"
-        description="I'm a software engineer with expertise in React, TypeScript, and modern web technologies. I focus on building user-centric applications, contributing to open-source, and sharing knowledge through detailed technical articles."
+        description="A passionate Software Engineer with expertise in full-stack web development since 2020. Specializing in crafting elegant user interfaces, I combine design engineering with robust front-end and back-end development. I'm dedicated to sharing in-depth technical knowledge through comprehensive articles."
       />
-      <TimelineSection />
+      <hr />
+      <section className="py-10 md:py-20">
+        <Wrapper className="space-y-12">
+          <SectionIntro
+            heading="Timeline"
+            subheading="Professional milestones and growth."
+            paragraph="Explore my journey through key achievements."
+          />
+          <TimelineList />
+        </Wrapper>
+      </section>
     </main>
   );
 }
