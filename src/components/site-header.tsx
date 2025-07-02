@@ -8,7 +8,7 @@ import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Wrapper } from "@/components/wrapper";
 import { Button } from "@/components/ui/button";
 
@@ -113,7 +113,7 @@ export function SiteHeader() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <ModeToggle />
+          <ThemeToggle />
           <Button
             variant="secondary"
             size="icon"
